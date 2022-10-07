@@ -20,55 +20,41 @@ for wartosc in kraje.keys():
     print(f'{wartosc}: {kraje[wartosc]}') #1 f'{}: {}:' - w taki sposob mozemy mieszac tekst i zmienne
     #2 NAZWA: formatowanie print(f'{}: {}:')
 print()
-
+print('Zadanie 4.2a')
 
 #Zadanie 4.2a
 
-galerie = {}
+galerie = []
+max_miasto = ''
+max_powierzchnia = 0
+min_miasto = ''
+min_powierzchnia = 9999
 
 for wiersz in wiersze:
-    miasto = wiersz.split(' ')[1]
-    galerie[miasto] = 0
-print(galerie)
+    informacje = wiersz.split(' ')
+    miasto = informacje[1]
+    powierzchnia_galerii = 0
+    liczba_lokali = 0
+    for i in range(2, len(wiersz) - 1, 2):
+        if informacje[i] == '0':
+            break
+        liczba_lokali += 1
+        powierzchnia_lokalu = int(informacje[i]) * int(informacje[i+1])
+        powierzchnia_galerii += powierzchnia_lokalu
+    print(f'{miasto} {powierzchnia_galerii} {liczba_lokali}')
+
+
+    if powierzchnia_galerii > max_powierzchnia:
+        max_powierzchnia = powierzchnia_galerii
+        max_miasto = miasto
+    if powierzchnia_galerii < min_powierzchnia:
+        min_powierzchnia = powierzchnia_galerii
+        min_miasto = miasto
+
 print()
-
-def jaka_powierzchnia(wiersze):
-    lokal = []
-    for wiersz in wiersze:
-        wymiary = wiersz.split(' ')[2:]
-       # print(wymiary)
-        k = wymiary
-        wymiary = list(map(int, k)) # Zamiana STR na INT w tablicy
-        wymiar = wymiary[0] * wymiary[1]
-        print(wymiary[0])
-        print(wymiary[1])
-        lokal.append(wymiar)
-        print(lokal)
-
-
-
-    print(wymiary[0])
-    print(wymiary[1])
-    print(wymiar)
-#      for x in wymiary:
-#        suma = wymiary[x] + wymiary[x+1]
-#        k.append(suma)
-#
-#        print(k)
-
-
-
-powierzchnia = {1}
-
-for wiersz in wiersze:
-    miasto = wiersz.split(' ')[1]
-
-
-jaka_powierzchnia(wiersze)
-
-
-
-
+print('Zadanie 4.2b')
+print(f'{max_miasto} {max_powierzchnia} ')
+print(f'{min_miasto} {min_powierzchnia} ')
 
 
 
