@@ -1,15 +1,26 @@
-a = int(input())
-b = int(input())
+# PIRAMIDA LICZBOWA TESTY
 
-def nwd(a,b):
-    while b >= 0:
-        if b == 0:
-            print(a)
-            break
-        else:
-            r = a % b
-            a = b
-            b = r
+n = int(input("Ile liczb calkowitych: "))
+
+liczby = input("Podaj ciag liczb: ").split(" ")
+if len(liczby) > n:
+    print("Wpisales nieodpowiednia ilosc liczb !")
+else:
+    print(liczby)
+
+def piramida(liczby):
+    print("dupa")
 
 
-nwd(a,b)
+
+
+
+
+
+
+
+piramida(liczby)
+
+
+
+
