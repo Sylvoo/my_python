@@ -1,4 +1,4 @@
-plik = open("liczby_przyklad.txt", "r")
+plik = open("liczby_przyklad.txt", "r") # Dla przykladowych dziala, dla normalnych danych dlugo liczy i nie moze wyliczyc
 
 wiersze = plik.readlines()
 
