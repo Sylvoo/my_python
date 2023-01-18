@@ -7,10 +7,16 @@ def spin_words(sentence):
             ciag.append(p)
         else:
             ciag.append(k)
-    print(ciag)
     return ciag
 
 x = "Hey fellow warriors"
-spin_words(x)
 
-# wypisuje dobrze ale w tablicy a nie stringu :) zrob cos z tym
+
+def listToString(s):
+
+    str1 = " "
+
+    return print(str1.join(s))
+
+
+listToString(spin_words(x))
