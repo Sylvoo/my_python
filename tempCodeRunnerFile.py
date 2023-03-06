@@ -1,2 +1,0 @@
-
-        liczba = liczba / 2
